@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>42度空间-网格布局之用同名网格线命名和定位项目测试1</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-rows: repeat(3, [row-start] 1fr [row-end]);
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            border-radius: .2rem;
+            font-size: .8em;
+            min-height: 7rem;
+            padding: .75rem;
+            color: #f0f0f3;
+            background-color: #e91e63;
+        }
+        .item1 {
+            grid-row:    row-start 2 / row-end 3;
+            grid-column: col-start / col-start 3;
+            background-color: #009688;
+        }
+        body {
+            font-family: -apple-system,BlinkMacSystemFont,SFNSDisplay-Regular,Roboto,Helvetica,Arial,sans-serif;
+            line-height: 1.15;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+</div>
+</body>
+</html>
+

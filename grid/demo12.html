@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>42度空间-网格布局之用网格区域命名和定位项目测试1</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-rows:    150px 1fr 100px;
+            grid-template-columns: 1fr 200px;
+            grid-template-areas:   "header header"
+            "content sidebar"
+            "footer footer";
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            border-radius: .2rem;
+            font-size: .8em;
+            min-height: 3rem;
+            padding: .75rem;
+            color: #f0f0f3;
+        }
+        header {
+            grid-row-start: header;
+            grid-row-end: header;
+            grid-column-start: header;
+            grid-column-end: header;
+            background-color: #009688;
+        } 
+        main {
+            grid-area: content;
+            background-color: #e91e63;
+        }
+        aside {
+            grid-area: sidebar;
+            background-color: #ff5722;
+        }
+        footer {
+            grid-row: footer;
+            grid-column: footer;
+            background: #9c27b0;
+        }
+        body {
+            font-family: -apple-system,BlinkMacSystemFont,SFNSDisplay-Regular,Roboto,Helvetica,Arial,sans-serif;
+            line-height: 1.15;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="item">1</header >
+    <main class="item">2</main>
+    <aside class="item">3</aside>
+    <footer class="item">4</footer >
+</div>
+</body>
+</html>
+

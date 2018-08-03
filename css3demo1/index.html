@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        figure{
+            width: 33.33%;width: 33.3%;
+            float: left;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        figure img{
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            transition: all 0.35s;
+            -webkit-transition: all 0.35s;
+            -moz-transition: all 0.35s;
+            -o-transition: all 0.35s;
+            -ms-transition: all 0.35s;
+        }
+        figcaption{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        figcaption p {
+            transition: all 0.35s;
+            -webkit-transition: all 0.35s;
+            -moz-transition: all 0.35s;
+            -o-transition: all 0.35s;
+            -ms-transition: all 0.35s;
+        }
+        @media screen and (min-width: 1001px) {
+            figure{
+                width: 33.333%;
+            }   
+        }
+        @media screen and (min-width: 601px) and (max-width: 1000px) {
+            figure{
+                width: 50%;
+            }  
+        }
+        @media screen and (max-width: 600px){
+            figure{
+                width: 100%;
+            } 
+        }
+        /* N01 */
+        .item1{
+            background: #696969;
+        }
+        .item1 .content{
+            padding: 20px;
+            color:#fff;  
+        }
+        .item1 .content p {
+            background: #fff;
+            padding: 4px 10px;
+            font-size: 13px;
+            color: #ddd;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -o-border-radius: 4px;
+            -ms-border-radius: 4px;
+            margin-top: 5px;
+            -webkit-transform: translate(-200px, 0px);
+            -moz-transform: translate(-200px, 0px);
+            -ms-transform: translate(-200px, 0px);
+            -o-transform: translate(-200px, 0px);
+            transform: translate(-200px, 0px);
+        }
+        .item1:hover .content p{
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+        }
+        .item1:hover img{
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .item1:hover .content p:nth-of-type(1) {
+            transition-delay: 0.05s;
+            -moz-transition-delay: 0.05s;
+            -webkit-transition-delay: 0.05s;
+            -o-transition-delay: 0.05s;
+            -ms-transition-delay: 0.05s;
+        }
+        .item1:hover .content p:nth-of-type(2) {
+            transition-delay: 0.1s;
+            -moz-transition-delay: 0.1s;
+            -webkit-transition-delay: 0.1s;
+            -o-transition-delay: 0.1s;
+            -ms-transition-delay: 0.1s;
+        }
+        .item1:hover .content p:nth-of-type(3) {
+            transition-delay: 0.15s;
+            -moz-transition-delay: 0.15s;
+            -webkit-transition-delay: 0.15s;
+            -o-transition-delay: 0.15s;
+            -ms-transition-delay: 0.15s;
+        }
+        /* N0.2 */
+        .item2{
+            background:#383838;
+        }
+        .item2 figcaption{
+            width: 100%;
+            height: 100%;
+        }
+        .item2 .box{
+            position:absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #fff;
+            transform: translate(0, -400px) rotate(0deg);
+        }
+        .item2 figcaption h2{
+            margin: 15% 0px 0px 15%;
+            color: #fff;
+        }
+        .item2 figcaption p{
+            margin-left: 15%;
+            margin-top: 5px;
+            color: #fff;
+            opacity: 0;
+            transform: translate(0, 30px);
+            transition: all 0.35s;
+        }
+        .item2 figcaption .box{
+            transition: all 0.35s;
+            transform-origin: top left;
+        }
+        .item2:hover .box{
+            transform: translate(0, 0px) rotate(360deg);
+        }
+        .item2:hover figcaption p {
+            opacity: 1;
+            transform: translate(0, 0px);
+        }
+        /* No3 */
+        .item3{
+            background: #383838;
+            position: relative;
+        }
+        .item3 figcaption{
+            width: 100%;
+            height: 100%;
+        }
+        .item3 figcaption h2, .item3 figcaption p{
+            position: absolute;
+            left: 15%;
+            top: 30%;
+            color:#fff;
+            transform: skew(90deg);
+            transition: all 0.15s;
+        }
+        .item3 figcaption p{
+            transition-delay: 0.1s;
+        }
+        .item3 figcaption p{
+            margin-top: 40px;
+        }
+        .item3:hover figcaption h2, .item3:hover figcaption p {
+            transform: skew(0deg);
+        }
+        /*  */
+        .item4 {
+            background: #696969;
+        }
+        .item4 figcaption{
+            width: 100%;
+            height: 100%;
+        }
+        .item4 .box{
+            position:absolute;
+            left: 10%;
+            top: 10%;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #fff;
+            transform: scale(1.2);
+            opacity: 0;
+            transition: all 0.35s;
+        }
+        .item4 figcaption {
+            width: 100%;
+            height: 100%;
+        }
+        .item4 figcaption h2, .item4 figcaption p{
+            position: absolute;
+            width: 60%;
+            left: 20%;
+            top: 30%;
+            overflow: hidden;
+            color: #fff;
+        }
+        .item4 figcaption p{
+            margin-top: 40px;
+        }
+        .item4:hover figcaption .box{
+            transform: scale(1.0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <figure class="item1">
+        <img src="./timg.jpg" alt="">
+        <figcaption class="content">
+            <h2>标题</h2>
+            <p>注解1</p>
+            <p>注解2</p>
+            <p>注解3</p>
+        </figcaption>
+    </figure>
+    <figure class="item2">
+        <img src="./timg (1).jpg" alt="">
+        <figcaption>
+            <h2>标题</h2>
+            <p>I LOVE YOU！！</p>
+            <div class="box">
+
+            </div>
+        </figcaption>
+    </figure>
+    <figure class="item3">
+        <img src="./timg (2).jpg" alt="">
+        <figcaption>
+            <h2>标题</h2>
+            <p>注解</p>
+        </figcaption>
+    </figure>
+    <figure class="item4">
+        <img src="./timg (3).jpg" alt="">
+        <figcaption>
+            <h2>标题</h2>
+            <p>注解</p>
+            <div class="box"></div>
+        </figcaption>
+    </figure>
+</body>
+</html>
